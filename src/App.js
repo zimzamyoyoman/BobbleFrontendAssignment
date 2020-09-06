@@ -1,12 +1,13 @@
 import React from 'react';
 import SignupForm from './SignupForm';
 import Header from './Header';
-import './App.css';
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* Header: Component contains brand logo */}
+      <Header /> 
+      {/* SignUpForm: Component for sign up form */}
       <SignupForm />
     </div>
   );
