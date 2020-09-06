@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import "./SignupForm.css";
 import "./Divider.css"
 
@@ -27,37 +28,51 @@ class SignupForm extends Component {
     }
 
     handleSubmit(evt) {
-        this.setState({ firstname: "" });
+        evt.preventDefault();
+
+        $.ajax({
+            url: "https://reqres.in/api/users",
+            type: "POST",
+            data: {
+                email: this.state.email,
+                password: this.state.password
+            },
+            success: function (response) {
+                console.log(response);
+            }
+        });
+        
+        this.setState({ firstname: "", lastname: "", email: "", password: "" });
     }
 
     render() {
         return (
-            <div class="wrapper">
+            <div className="wrapper">
                 <div className="SignupBox">
                     <form onSubmit={this.handleSubmit} className="form">
 
-                        <h5 class="title"> SIGN UP </h5>
+                        <h5 className="title"> SIGN UP </h5>
 
-                        <h1 class="heading"> Create your account</h1>
-                        <div class="subtitle"> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit  </small></div>
+                        <h1 className="heading"> Create your account</h1>
+                        <div className="subtitle"> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit  </small></div>
 
-                        <div class="signupbuttons">
-                            <button class="loginBtn loginBtn--google">
+                        <div className="signupbuttons">
+                            <button className="loginBtn loginBtn--google">
                                 Sign up with Google
                     </button>
 
-                            <button class="loginBtn loginBtn--facebook">
+                            <button className="loginBtn loginBtn--facebook">
                                 Sign up with Facebook
                     </button>
                         </div>
 
 
                         <Divider>or</Divider>
-                        <div class="form-inputs">
+                        <div className="form-inputs">
 
 
                             <input
-                                class="firstName"
+                                className="firstName"
                                 type="text"
                                 name="firstname"
                                 placeholder="First Name"
@@ -66,7 +81,7 @@ class SignupForm extends Component {
                             />
 
                             <input
-                                class="lastName"
+                                className="lastName"
                                 type="text"
                                 name="lastname"
                                 placeholder="Last Name"
@@ -75,7 +90,7 @@ class SignupForm extends Component {
                             />
 
                             <input
-                                class="email"
+                                className="email"
                                 type="email"
                                 name="email"
                                 placeholder="Email Address"
@@ -84,7 +99,7 @@ class SignupForm extends Component {
                             />
 
                             <input
-                                class="password"
+                                className="password"
                                 type="password"
                                 name="password"
                                 placeholder="Password"
