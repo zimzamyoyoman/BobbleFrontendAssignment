@@ -10,11 +10,11 @@
 
 ## Description
 
-The project consists of a static web page with a sign up form. The main app.js file contains two components; a header component and a signupform component.
-The header component contains the brand logo. The signupform component contains the main form content of the page. 
-A user has to fill all the fields before form submission, and form validation is done for all the input fields. 
-After submission of the form, a request is sent to https://reqres.in/api/request, and the response is logged onto the console, which consists of the details that the user has entered, along with some extra information. (AJAX is used to submit the form data.)
-The user also has the option to sign up using the Google and Facebook Web Client SDK.
+The project consists of a static web page with a sign up form. The main app.js file contains two components; a header component and a signupform component.  
+The header component contains the brand logo. The signupform component contains the main form content of the page.  
+A user has to fill all the fields before form submission, and form validation is done for all the input fields.  
+After submission of the form, a request is sent to https://reqres.in/api/request, and the response is logged onto the console, which consists of the details that the user has entered, along with some extra information. (AJAX is used to submit the form data.)  
+The user also has the option to sign up using the Google and Facebook Web Client SDK.  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
