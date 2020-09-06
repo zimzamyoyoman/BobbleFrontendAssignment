@@ -17,7 +17,7 @@ const Divider = ({ children }) => {
 class SignupForm extends Component {
     constructor(props) {
         super(props);
-        this.state = { firstname: "", lastname:"", email:"", password:""};
+        this.state = { firstname: "", lastname: "", email: "", password: "" };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -25,60 +25,80 @@ class SignupForm extends Component {
     handleChange(evt) {
         this.setState({ [evt.target.name]: evt.target.value });
     }
-    
+
     handleSubmit(evt) {
-        this.setState({ firstname: ""});
+        this.setState({ firstname: "" });
     }
 
     render() {
         return (
-            <div> 
-                <form onSubmit={this.handleSubmit} className="SignupBox">
+            <div class="wrapper">
+                <div className="SignupBox">
+                    <form onSubmit={this.handleSubmit} className="form">
 
-                    <h1> Signup </h1>
+                        <h5 class="title"> SIGN UP </h5>
 
-                    <p> Create your account</p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <p class="heading"> Create your account</p>
+                        <div class="subtitle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
 
-                    <button> Sign up with Google </button>
-                    <button> Sign up with Facebook </button>
+                        <div class="signupbuttons">
+                            <button class="loginBtn loginBtn--google">
+                                Sign up with Google
+                    </button>
 
-                    <Divider>Or</Divider>
+                            <button class="loginBtn loginBtn--facebook">
+                                Sign up with Facebook
+                    </button>
+                        </div>
 
-                    <input
-                        type="text"
-                        name="firstname"
-                        placeholder="First Name"
-                        value={this.state.firstname}
-                        onChange={this.handleChange}
-                    />
 
-                    <input
-                        type="text"
-                        name="lastname"
-                        placeholder="Last Name"
-                        value={this.state.lastname}
-                        onChange={this.handleChange}
-                    />
+                        <Divider>Or</Divider>
+                        <div class="form-inputs">
 
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                    />
 
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.handleChange}
-                    />
+                            <input
+                                class="firstName"
+                                type="text"
+                                name="firstname"
+                                placeholder="First Name"
+                                value={this.state.firstname}
+                                onChange={this.handleChange}
+                            />
 
-                    <button> SIGN UP </button>
-                </form>
+                            <input
+                                class="lastName"
+                                type="text"
+                                name="lastname"
+                                placeholder="Last Name"
+                                value={this.state.lastname}
+                                onChange={this.handleChange}
+                            />
+
+                            <input
+                                class="email"
+                                type="email"
+                                name="email"
+                                placeholder="Email Address"
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                            />
+
+                            <input
+                                class="password"
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                                value={this.state.password}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        
+                        <div className="signUp">
+                            <small> By clicking Sign Up, you agree to our <a href=""> Terms of Use </a> and our <a href=""> Privacy Policy</a>.</small>
+                            <button type="submit">SIGN UP</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }
