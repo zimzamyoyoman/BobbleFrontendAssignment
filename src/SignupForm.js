@@ -38,8 +38,8 @@ class SignupForm extends Component {
 
                         <h5 class="title"> SIGN UP </h5>
 
-                        <p class="heading"> Create your account</p>
-                        <div class="subtitle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+                        <h1 class="heading"> Create your account</h1>
+                        <div class="subtitle"> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit  </small></div>
 
                         <div class="signupbuttons">
                             <button class="loginBtn loginBtn--google">
@@ -52,7 +52,7 @@ class SignupForm extends Component {
                         </div>
 
 
-                        <Divider>Or</Divider>
+                        <Divider>or</Divider>
                         <div class="form-inputs">
 
 
@@ -92,7 +92,7 @@ class SignupForm extends Component {
                                 onChange={this.handleChange}
                             />
                         </div>
-                        
+
                         <div className="signUp">
                             <small> By clicking Sign Up, you agree to our <a href=""> Terms of Use </a> and our <a href=""> Privacy Policy</a>.</small>
                             <button type="submit">SIGN UP</button>

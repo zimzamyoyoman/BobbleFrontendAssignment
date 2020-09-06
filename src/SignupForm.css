@@ -1,6 +1,6 @@
 .SignupBox {
   margin: 4rem auto;
-  padding: 2rem 3rem 3rem;
+  padding: 1rem 1rem 1rem;
   max-width: 600px;
   background: #ffffff;
   border: solid 2px #f0f0f0;
@@ -10,6 +10,25 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-weight: lighter;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #808080;
+}
+
+.heading {
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-weight: lighter;
+  color: #808080;
+  margin-bottom: 10px;
 }
 
 .signupbuttons {
@@ -88,12 +107,23 @@ input::placeholder {
 }
 
 a:link {
-  color: blue;
+  color: #1976d2;
   text-decoration: none;
 }
 
-body {
-  padding: 2em;
+/* visited link */
+a:visited {
+  color: #42a5f5;
+}
+
+/* mouse over link */
+a:hover {
+  color: #2962ff;
+}
+
+/* selected link */
+a:active {
+  color: #0d47a1;
 }
 
 /* Shared */
