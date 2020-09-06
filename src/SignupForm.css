@@ -11,6 +11,7 @@
   align-items: center;
   text-align: center;
   font-weight: lighter;
+  font-size: 1.2rem;
 }
 
 .title {
@@ -130,7 +131,7 @@ a:active {
 .loginBtn {
   box-sizing: border-box;
   position: relative;
-  /* width: 13em;  - apply for fixed size */
+  /* max-width: 40%;   */
   margin: 0.2em;
   padding: 0 15px 0 46px;
   border: none;
@@ -188,4 +189,105 @@ a:active {
 .loginBtn--google:hover,
 .loginBtn--google:focus {
   background: #e74b37;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 450px) {
+
+  .SignupBox {
+  margin: 4rem auto;
+  padding: 1rem 1rem 1rem;
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+.signupbuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  width: 80%;
+  /* max-width: 40%;   */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+}
+
+@media only screen and (min-width: 450px) and (max-width: 500px) {
+
+  .SignupBox {
+  margin: 4rem auto;
+  padding: 1rem 1rem 1rem;
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+.signupbuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  width: 60%;
+  /* max-width: 40%;   */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #fff;
+}
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+
+  .SignupBox {
+  margin: 4rem auto;
+  padding: 1rem 1rem 1rem;
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 60%;  
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+
+  .SignupBox {
+  margin: 4rem auto;
+  padding: 1rem 1rem 1rem;
+  max-width: 90%;
+  font-size: 1rem;
+}
 }

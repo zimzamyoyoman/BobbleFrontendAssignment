@@ -76,6 +76,7 @@ class SignupForm extends Component {
                                 type="text"
                                 name="firstname"
                                 placeholder="First Name"
+                                required
                                 value={this.state.firstname}
                                 onChange={this.handleChange}
                             />
@@ -85,6 +86,7 @@ class SignupForm extends Component {
                                 type="text"
                                 name="lastname"
                                 placeholder="Last Name"
+                                required
                                 value={this.state.lastname}
                                 onChange={this.handleChange}
                             />
@@ -94,6 +96,7 @@ class SignupForm extends Component {
                                 type="email"
                                 name="email"
                                 placeholder="Email Address"
+                                required
                                 value={this.state.email}
                                 onChange={this.handleChange}
                             />
@@ -103,6 +106,7 @@ class SignupForm extends Component {
                                 type="password"
                                 name="password"
                                 placeholder="Password"
+                                required
                                 value={this.state.password}
                                 onChange={this.handleChange}
                             />
