@@ -1,4 +1,18 @@
 import React, { Component } from 'react';
+import "./SignupForm.css";
+import "./Divider.css"
+
+const Divider = ({ children }) => {
+    return (
+        <div className="container">
+            <div className="border" />
+            <span className="content">
+                {children}
+            </span>
+            <div className="border" />
+        </div>
+    );
+};
 
 class SignupForm extends Component {
     constructor(props) {
@@ -19,8 +33,18 @@ class SignupForm extends Component {
     render() {
         return (
             <div> 
-                <h1> Signup </h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="SignupBox">
+
+                    <h1> Signup </h1>
+
+                    <p> Create your account</p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+                    <button> Sign up with Google </button>
+                    <button> Sign up with Facebook </button>
+
+                    <Divider>Or</Divider>
+
                     <input
                         type="text"
                         name="firstname"
